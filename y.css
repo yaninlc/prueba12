@@ -12,26 +12,35 @@ body {
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
+    text-align: center;
 }
 
-/* Estilo del botón */
-button.btn {
-    background-color: #4CAF50; /* Color verde */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Transición suave para el cambio de color y tamaño */
+/* Estilo del cuadro que cambia de color */
+.color-box {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: #FF5733; /* Color inicial */
+    animation: colorChange 5s infinite; /* Llamar a la animación */
 }
 
-button.btn:hover {
-    background-color: #45a049; /* Color verde más oscuro cuando el cursor pasa por encima */
-}
-
-button.btn:active {
-    background-color: #3e8e41; /* Color verde aún más oscuro cuando se hace clic */
-    transform: scale(0.95); /* Reduce el tamaño al hacer clic */
+/* Definir la animación */
+@keyframes colorChange {
+    0% {
+        background-color: #FF5733; /* Rojo */
+    }
+    25% {
+        background-color: #33FF57; /* Verde */
+    }
+    50% {
+        background-color: #3357FF; /* Azul */
+    }
+    75% {
+        background-color: #F033FF; /* Morado */
+    }
+    100% {
+        background-color: #FF5733; /* Vuelve a rojo */
+    }
 }
 
 header {
@@ -45,20 +54,6 @@ header h1 {
     margin: 0;
 }
 
-/* Estilo para las secciones */
-section {
-    margin: 20px 0;
-}
-
-section h2 {
-    color: #333;
-    font-size: 1.5em;
-}
-
-section p {
-    font-size: 1.1em;
-}
-
 /* Estilo para el pie de página */
 footer {
     background-color: #333;
@@ -69,3 +64,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
