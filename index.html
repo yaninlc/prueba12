@@ -1,20 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botón Interactivo</title>
+    <title>Botón Interactivo con Nueva Ventana y Animación</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <script>
+        function abrirVentana() {
+            // Abrir una nueva ventana
+            const ventanaNueva = window.open("", "VentanaNueva", "width=400,height=300");
+
+            // Escribir contenido en la nueva ventana
+            ventanaNueva.document.write("<h2 class='girar-texto'>¡Bienvenido a la nueva ventana!</h2>");
+            ventanaNueva.document.write("<p class='girar-texto'>Este es un mensaje de texto que se muestra en la nueva ventana.</p>");
+            ventanaNueva.document.write("<p class='girar-texto'>¡Gracias por hacer clic en el botón!</p>");
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Botón Interactivo</h1>
-        <p>Haz clic en el botón para ver el efecto.</p>
+        <h1>Botón Interactivo con Nueva Ventana</h1>
+        <p>Haz clic en el botón para abrir una nueva ventana con texto animado.</p>
     </header>
 
     <section>
-        <button class="interactive-button">Haz clic aquí</button>
+        <button class="interactive-button" onclick="abrirVentana()">Haz clic aquí</button>
     </section>
 
     <footer>
@@ -22,3 +32,4 @@
     </footer>
 </body>
 </html>
+
