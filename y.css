@@ -78,3 +78,83 @@ footer {
     font-size: 0.9em;
     color: #FF00FF; /* Fucsia */
 }
+/* Reset básico de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Fondo oscuro (negro) */
+    color: white; /* Color de texto blanco */
+    text-align: center;
+    padding: 50px;
+}
+
+/* Estilo del encabezado */
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #FF00FF; /* Fucsia */
+}
+
+p {
+    font-size: 1.2em;
+    color: #FF00FF; /* Fucsia */
+}
+
+/* Estilo del botón */
+.interactive-button {
+    background-color: #FF00FF; /* Color de fondo fucsia */
+    color: #333; /* Texto negro */
+    border: none;
+    padding: 15px 32px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Transición suave para el cambio de color y tamaño */
+}
+
+/* Efecto al pasar el mouse por encima */
+.interactive-button:hover {
+    background-color: #D100D1; /* Fucsia más oscuro */
+    transform: scale(1.1); /* Agranda el tamaño del botón al 110% */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+/* Efecto cuando el botón está presionado */
+.interactive-button:active {
+    background-color: #9C009C; /* Fucsia aún más oscuro cuando se hace clic */
+    transform: scale(0.9); /* Reduce el tamaño del botón al 90% al hacer clic */
+}
+
+/* Animación de rotación para el texto */
+@keyframes girarTexto {
+    0% {
+        transform: rotate(0deg); /* Comienza en su posición original */
+    }
+    50% {
+        transform: rotate(360deg); /* Gira 360 grados en la mitad de la animación */
+    }
+    100% {
+        transform: rotate(0deg); /* Vuelve a su posición original */
+    }
+}
+
+/* Aplica la animación al texto dentro de la nueva ventana */
+.girar-texto {
+    display: inline-block;
+    animation: girarTexto 1.5s ease-in-out; /* Cambié la duración de 3s a 1.5s */
+    color: #FF00FF; /* Fucsia para el texto */
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #FF00FF; /* Fucsia */
+}
