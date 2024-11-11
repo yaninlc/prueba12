@@ -8,8 +8,8 @@
 /* Estilo general del body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #333; /* Fondo oscuro (negro) */
+    color: white; /* Color de texto blanco */
     text-align: center;
     padding: 50px;
 }
@@ -20,18 +20,18 @@ header {
 }
 
 h1 {
-    color: #333;
+    color: #FF00FF; /* Fucsia */
 }
 
 p {
     font-size: 1.2em;
-    color: #555;
+    color: #FF00FF; /* Fucsia */
 }
 
 /* Estilo del botón */
 .interactive-button {
-    background-color: #4CAF50; /* Color de fondo inicial */
-    color: white;
+    background-color: #FF00FF; /* Color de fondo fucsia */
+    color: #333; /* Texto negro */
     border: none;
     padding: 15px 32px;
     font-size: 18px;
@@ -42,12 +42,14 @@ p {
 
 /* Efecto al pasar el mouse por encima */
 .interactive-button:hover {
-    background-color: #45a049; /* Color más oscuro cuando el cursor está encima */
+    background-color: #D100D1; /* Fucsia más oscuro */
+    transform: scale(1.1); /* Agranda el tamaño del botón al 110% */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
 /* Efecto cuando el botón está presionado */
 .interactive-button:active {
-    background-color: #333; /* Color oscuro cuando se hace clic */
+    background-color: #9C009C; /* Fucsia aún más oscuro cuando se hace clic */
     transform: scale(0.9); /* Reduce el tamaño del botón al 90% al hacer clic */
 }
 
@@ -68,12 +70,11 @@ p {
 .girar-texto {
     display: inline-block;
     animation: girarTexto 3s ease-in-out; /* Aplica la animación girarTexto durante 3 segundos */
+    color: #FF00FF; /* Fucsia para el texto */
 }
 
 footer {
     margin-top: 30px;
     font-size: 0.9em;
-    color: #777;
+    color: #FF00FF; /* Fucsia */
 }
-
-
