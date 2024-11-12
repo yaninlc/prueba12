@@ -13,6 +13,7 @@
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    background-color: #D8A7FF; /* Fondo lila para toda la página */
   }
   
   .container {
@@ -47,7 +48,7 @@
   .boton {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007BFF;
+    background-color: #FF69B4; /* Color rosa */
     color: white;
     border: none;
     border-radius: 5px;
@@ -56,7 +57,7 @@
   }
   
   .boton:active {
-    background-color: #0056b3;
+    background-color: #D60087; /* Color rosa más oscuro al hacer clic */
     transform: scale(0.9); /* Reducir tamaño del botón al hacer clic */
   }
   
@@ -66,30 +67,44 @@
     height: 200px;
     margin: 20px auto;
     background-color: #FF5733;
-    animation: moverDerecha 4s infinite;
+    animation: moverDerecha 4s infinite, cambiarColor 4s infinite; /* Se añaden ambas animaciones */
+    transition: transform 0.3s ease; /* Nueva transición en el cuadro */
   }
   
   /* Animación que mueve el cuadro y cambia de color en cada ciclo */
   @keyframes moverDerecha {
     0% {
       transform: translateX(0);
-      background-color: #FF5733;
     }
     25% {
       transform: translateX(50px);
-      background-color: #33FF57;
     }
     50% {
       transform: translateX(100px);
-      background-color: #3357FF;
     }
     75% {
       transform: translateX(150px);
-      background-color: #F0E500;
     }
     100% {
       transform: translateX(200px);
-      background-color: #FF5733;
+    }
+  }
+  
+  @keyframes cambiarColor {
+    0% {
+      background-color: #FF5733; /* Rojo inicial */
+    }
+    25% {
+      background-color: #33FF57; /* Verde */
+    }
+    50% {
+      background-color: #3357FF; /* Azul */
+    }
+    75% {
+      background-color: #F0E500; /* Amarillo */
+    }
+    100% {
+      background-color: #FF5733; /* Vuelve a rojo */
     }
   }
   
@@ -98,10 +113,10 @@
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    animation: girarYDesplazar 3s infinite;
+    animation: girarYDesplazar 4s infinite ease-in-out; /* Modificada la velocidad de la animación */
   }
   
-  /* Animación que hace que el texto gire y se desplace hacia arriba */
+  /* Nueva animación para el texto (giro y desplazamiento hacia arriba) */
   @keyframes girarYDesplazar {
     0% {
       transform: rotate(0deg) translateY(0);
@@ -114,9 +129,10 @@
     }
   }
   
-  /* Estilo para el cuadro con efecto hover */
+  /* Efecto hover para el cuadro */
   .cuadro:hover {
     transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
     transition: all 0.3s ease;
   }
+  
   
