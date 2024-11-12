@@ -1,4 +1,4 @@
-//* Estilos generales */
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +30,7 @@
     transition: all 0.3s ease; /* Transición suave para el cambio de tamaño y color */
   }
   
+  /* Cambio de color y tamaño al hacer clic */
   .boton:active {
     background-color: #D60087; /* Color rosa más oscuro al hacer clic */
     transform: scale(0.9); /* Reducir tamaño del botón al hacer clic */
@@ -109,4 +110,5 @@
       transform: rotate(360deg) translateY(0);
     }
   }
+  
   
