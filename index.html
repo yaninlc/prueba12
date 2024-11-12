@@ -3,33 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botón Interactivo con Nueva Ventana y Animación</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
-    <script>
-        function abrirVentana() {
-            // Abrir una nueva ventana
-            const ventanaNueva = window.open("", "VentanaNueva", "width=400,height=300");
-
-            // Escribir contenido en la nueva ventana
-            ventanaNueva.document.write("<h2 class='girar-texto'>¡Bienvenido a la nueva ventana!</h2>");
-            ventanaNueva.document.write("<p class='girar-texto'>Este es un mensaje de texto que se muestra en la nueva ventana.</p>");
-            ventanaNueva.document.write("<p class='girar-texto'>¡Gracias por hacer clic en el botón!</p>");
-        }
-    </script>
+    <title>Animaciones y Transiciones CSS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Botón Interactivo con Nueva Ventana</h1>
-        <p>Haz clic en el botón para abrir una nueva ventana con texto animado.</p>
-    </header>
 
-    <section>
-        <button class="interactive-button" onclick="abrirVentana()">Haz clic aquí</button>
-    </section>
+    <div class="contenedor">
+        <!-- Botón con cambio de color y tamaño -->
+        <button class="btn">Haz clic en mí</button>
 
-    <footer>
-        <p>&copy; 2024. Todos los derechos reservados.</p>
-    </footer>
+        <!-- Cuadro con animación de color y movimiento -->
+        <div class="cuadro"></div>
+
+        <!-- Texto con animación -->
+        <p class="texto-animado">Este es un texto que se anima.</p>
+    </div>
+
 </body>
 </html>
-
