@@ -8,16 +8,52 @@
 /* Estilo general de la página */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    text-align: center;
 }
 
-/* Contenedor de los elementos */
+/* Contenedor principal */
 .contenedor {
-    text-align: center;
+    width: 80%;
+    max-width: 900px;
+}
+
+/* Estilo del título */
+.titulo {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Estilo de cada canción */
+.cancion {
+    margin-bottom: 40px;
+}
+
+/* Imagen del álbum */
+.album {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Actividad 4: Cuadro aumenta de tamaño al hacer hover */
+.album:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo de las canciones */
+.nombre-cancion {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 /* Estilo del botón */
@@ -32,71 +68,53 @@ body {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Actividad 1: Cambio de color y tamaño al hacer clic */
+/* Actividad 1: Cambio de color y tamaño del botón al hacer clic */
 .btn:active {
-    background-color: #2ecc71;  /* Cambio de color */
-    transform: scale(1.1);  /* Aumento de tamaño */
+    background-color: #2ecc71; /* Cambio de color */
+    transform: scale(1.1); /* Aumento de tamaño */
 }
 
-/* Estilo del cuadro */
-.cuadro {
-    width: 100px;
-    height: 100px;
-    background-color: #e74c3c;
-    margin: 30px auto;
-    animation: moverDerecha 3s infinite;
-}
-
-/* Actividad 2: Cambio de color durante la animación */
-@keyframes moverDerecha {
-    0% {
-        transform: translateX(0);
-        background-color: #e74c3c;
-    }
-    25% {
-        background-color: #f39c12;
-    }
-    50% {
-        transform: translateX(150px);
-        background-color: #2ecc71;
-    }
-    75% {
-        background-color: #9b59b6;
-    }
-    100% {
-        transform: translateX(0);
-        background-color: #e74c3c;
-    }
-}
-
-/* Estilo y animación del texto */
-.texto-animado {
-    font-size: 24px;
-    color: #34495e;
-    margin-top: 50px;
+/* Estilo de la animación del texto */
+.nombre-cancion {
     animation: girarYSubir 5s infinite;
 }
 
-/* Actividad 3: Animación de giro y desplazamiento del texto */
+/* Actividad 3: Nueva animación para el texto (girar y subir) */
 @keyframes girarYSubir {
     0% {
         transform: rotate(0deg) translateY(0);
     }
     50% {
-        transform: rotate(180deg) translateY(-20px);
+        transform: rotate(180deg) translateY(-10px);
     }
     100% {
         transform: rotate(360deg) translateY(0);
     }
 }
 
-/* Actividad 4: Transición al hacer hover sobre el cuadro */
-.cuadro:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
+/* Actividad 2: Cuadro cambia de color durante la animación */
+@keyframes moverDerecha {
+    0% {
+        background-color: #e74c3c;
+        transform: translateX(0);
+    }
+    25% {
+        background-color: #f39c12;
+    }
+    50% {
+        background-color: #2ecc71;
+        transform: translateX(150px);
+    }
+    75% {
+        background-color: #9b59b6;
+    }
+    100% {
+        background-color: #e74c3c;
+        transform: translateX(0);
+    }
 }
 
 /* Actividad 5: Velocidad de la animación del texto */
-.texto-animado {
-    animation-duration: 3s;  /* Puedes ajustar esta duración para cambiar la velocidad */
+.nombre-cancion {
+    animation-duration: 3s;  /* Puedes cambiar la duración para hacer la animación más rápida o lenta */
 }
