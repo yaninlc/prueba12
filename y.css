@@ -1,4 +1,4 @@
-/* Estilos generales */
+//* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -7,47 +7,21 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    background-color: #D8A7FF; /* Fondo lila para toda la página */
   }
   
   .container {
     text-align: center;
   }
   
-  .bts-galeria {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    gap: 10px;
-    padding: 20px;
-    background-color: #D8A7FF; /* Fondo lila para la galería */
-    border-radius: 15px;
-    margin-top: 30px;
-    width: 80%; /* Ajusta el tamaño de la galería */
-  }
-  
-  .bts-galeria img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .bts-galeria img:hover {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  }
-  
-  /* Estilo para el botón */
   .boton {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 18px;
     background-color: #FF69B4; /* Color rosa */
     color: white;
     border: none;
@@ -61,17 +35,17 @@
     transform: scale(0.9); /* Reducir tamaño del botón al hacer clic */
   }
   
-  /* Estilo para el cuadro con animación de cambio de color */
+  /* Cuadro con animación de cambio de color */
   .cuadro {
     width: 200px;
     height: 200px;
-    margin: 20px auto;
+    margin: 30px 0;
     background-color: #FF5733;
-    animation: moverDerecha 4s infinite, cambiarColor 4s infinite; /* Se añaden ambas animaciones */
-    transition: transform 0.3s ease; /* Nueva transición en el cuadro */
+    animation: moverDerecha 4s infinite, cambiarColor 4s infinite; /* Animaciones combinadas */
+    transition: transform 0.3s ease; /* Transición en hover */
   }
   
-  /* Animación que mueve el cuadro y cambia de color en cada ciclo */
+  /* Animación que mueve el cuadro de izquierda a derecha */
   @keyframes moverDerecha {
     0% {
       transform: translateX(0);
@@ -90,9 +64,10 @@
     }
   }
   
+  /* Animación que cambia el color del cuadro en cada ciclo */
   @keyframes cambiarColor {
     0% {
-      background-color: #FF5733; /* Rojo inicial */
+      background-color: #FF5733; /* Rojo */
     }
     25% {
       background-color: #33FF57; /* Verde */
@@ -104,19 +79,25 @@
       background-color: #F0E500; /* Amarillo */
     }
     100% {
-      background-color: #FF5733; /* Vuelve a rojo */
+      background-color: #FF5733; /* Rojo (vuelve a inicial) */
     }
   }
   
-  /* Estilo para el texto animado */
+  /* Efecto hover en el cuadro */
+  .cuadro:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Animación para el texto */
   .texto-animado {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    animation: girarYDesplazar 4s infinite ease-in-out; /* Modificada la velocidad de la animación */
+    animation: girarYDesplazar 4s infinite ease-in-out; /* Velocidad ajustada */
   }
   
-  /* Nueva animación para el texto (giro y desplazamiento hacia arriba) */
+  /* Animación que hace que el texto gire y se desplace hacia arriba */
   @keyframes girarYDesplazar {
     0% {
       transform: rotate(0deg) translateY(0);
@@ -128,11 +109,4 @@
       transform: rotate(360deg) translateY(0);
     }
   }
-  
-  /* Efecto hover para el cuadro */
-  .cuadro:hover {
-    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
-    transition: all 0.3s ease;
-  }
-  
   
